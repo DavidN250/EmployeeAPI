@@ -162,7 +162,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 - Check mailtrap inbox and you will see the reset password link sent to the email provided.
 
-## DOCKERIZE ENVIRONMENT
+## DOCKERIZED ENVIRONMENT
 
 - Start docker on your machine
 - In downloaded code there is a file called **docker-compose.yml**
@@ -170,7 +170,27 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		./vendor/bin/sail up
 
-- This will create a container **employeeAPI** with necessary images. 
-- Run this command to see all created images:
+- This will create a container **employeeAPI** and download necessary images. (You have to be connected to the internet) 
+- Run this command to see all created images or view in docker desktop:
 
 		docker image list
+
+- Here you will need to change some emvironment variables  regarding DATABASE, copy these and replace in **.env** file. You will change DB_HOST from local host and change it to whatever mysql image is called on your machine (refer to the image list above. for me was **employeeapi_mysql_1**). it's because we are no longer using localhost but docker image inside a container. keep other variables as they were.
+
+		DB_CONNECTION=mysql
+		DB_HOST=employeeapi_mysql_1
+		DB_PORT=3306
+		DB_DATABASE=employeeapi
+		DB_USERNAME= << Your apache username (eg:root) >>
+		DB_PASSWORD= << Your apache password, if none leave it blank >>
+
+- To run migration inside a docker container run this command
+
+		./vendor/bin/sail artisan migrate
+
+- If this doesn't work use
+
+		./vendor/bin/sail artisan migrate:refresh
+
+- Now app is up and running inside a docker container
+- All tests will be the same as above but you will remove port (8000) on urls.
