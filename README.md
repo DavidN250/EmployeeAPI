@@ -104,7 +104,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 		http://127.0.0.1:8000/api/employees/2
 
 		KEY 						VALUE
-		phone_number 				+250799999222
+		phone_number 					+250799999222
 
 -This will update phone number of the employee with ID 2 with a new value
 
@@ -157,7 +157,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees 
 
-		KEY 						VALUE
+		KEY 							VALUE
 		email 						kamille@testing.com
 
 - Check mailtrap inbox and you will see the reset password link sent to the email provided.
