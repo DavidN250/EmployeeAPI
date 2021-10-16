@@ -7,6 +7,12 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 ## Installation
 
+### Preriquisite
+- Have xampp installed in your system (If you don't have it don't worry you can use dockerized environment)
+- Have a mailtrap account for email testing
+- Connect your PC to the internet
+
+### Process
 - Download this source code by clicking on Code (green button) and select Download ZIP
 - Extract the source code on your machine
 - Open code with your favourite code editor
@@ -17,8 +23,8 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 		DB_HOST=localhost
 		DB_PORT=3306
 		DB_DATABASE=employeeapi
-		DB_USERNAME= << Your mysql username >>
-		DB_PASSWORD= << Your mysql password >>
+		DB_USERNAME= << Your mysql username (eg:root) >>
+		DB_PASSWORD= << Your mysql password, if none leave it blank >>
 
 - Open your xampp control panel and start Apache and MySQL
 - Open command prompt or powershell if you are using windows OS
@@ -44,8 +50,10 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 - And you should get a response of an empty array because no employee is registered yet.
 
-### Preriquisite
 ## Create
+
+## Create account for manager
+-In your API tester send POST request at
 ## Read
 ## Update
 ## Delete
