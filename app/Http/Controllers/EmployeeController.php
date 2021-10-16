@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Haruncpi\LaravelIdGenerator\IdGenerator;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Employee;
@@ -29,7 +30,7 @@ class EmployeeController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
         'name' => 'required',
         'nationalID' => 'required|unique:employees,nationalID|min:16',
         'phone_number' => 'required|unique:employees,phone_number|min:10|max:13',
@@ -55,6 +56,20 @@ class EmployeeController extends Controller
         $employee = Employee::create($request->all());
         $employee->code = $code;
         $employee->save();
+
+        // email data
+        $email_data = array(
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'company_name' => 'TaskForce',
+        );
+
+        // send email with the template
+        Mail::send('welcome_email', $email_data, function ($message) use ($email_data) {
+            $message->to($email_data['email'], $email_data['name'])
+                ->subject('Welcome to TaskForce')
+                ->from('info@taskforce.com', 'TaskForce');
+        });
         
         return $employee;
     }

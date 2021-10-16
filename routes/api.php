@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -33,13 +32,18 @@ use Illuminate\Support\Facades\Route;
 
 // Public routes
 //Route::post('/register', [AuthController::class, 'register']);
-Route::post('/register', [RegisteredUserController::class, 'store']);
-Route::post('/login', [AuthController::class, 'login']);
 Route::get('/employees', [EmployeeController::class, 'index']);
 Route::get('/employees/{id}', [EmployeeController::class, 'show']);
 Route::get('/employees/search/{keyword}', [EmployeeController::class, 'search']);
 
+//Authentication
+Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/forgot-password', [PasswordResetLinkController::class, 'store']);
+
+
 // Protected routes
+
 Route::group(['middleware'
  => ['auth:sanctum','verified']], function () {
     Route::post('/employees', [EmployeeController::class, 'store']);
