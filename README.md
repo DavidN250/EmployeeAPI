@@ -22,8 +22,8 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 		DB_HOST=localhost
 		DB_PORT=3306
 		DB_DATABASE=employeeapi
-		DB_USERNAME= << Your mysql username (eg:root) >>
-		DB_PASSWORD= << Your mysql password, if none leave it blank >>
+		DB_USERNAME= << Your apache username (eg:root) >>
+		DB_PASSWORD= << Your apache password, if none leave it blank >>
 
 - Open your xampp control panel and start Apache and MySQL
 - Open command prompt or powershell if you are using windows OS
@@ -78,7 +78,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 		name 						Kamille Doe
 		email 						kamille@testing.com
 		nationalID 					1199812990900025
-		phone_number 				+257888888222
+		phone_number	 				+257888888222
 		dob 						15-07-1990
 		position 					WEBDESIGNER
 
