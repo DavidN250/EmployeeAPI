@@ -23,6 +23,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 - Open your xampp control panel and start Apache and MySQL
 - Open command prompt or powershell if you are using windows OS
 - Open terminal if you are using MacOS
+- create new database call it : "employeeapi"
 - Navigate to the directory where these codes are extracted
 - Make migration of tables in database by running: 
 
@@ -32,12 +33,12 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		php artisan serve
 
-- The serve shoul now start running probably at 
+- The server should be now start running probably at:
 
 		http://127.0.0.1:8000/
 
 - Open your API tester (for me was Postman)
-- Open new tab and send GET request at 
+- Open new tab in your API tester and send GET request at:
 
 		http://127.0.0.1:8000/api/employees
 
