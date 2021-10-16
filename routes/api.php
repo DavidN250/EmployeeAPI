@@ -49,7 +49,7 @@ Route::group(['middleware'
     Route::post('/employees', [EmployeeController::class, 'store']);
     Route::put('/employees/{id}', [ProductController::class, 'update']);
     Route::delete('/employees/{id}', [EmployeeController::class, 'destroy']);
-    Route::post('/employees/activate/{id}', [EmployeeController::class, 'activate']);
+    Route::get('/employees/activate/{id}', [EmployeeController::class, 'activate']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 
