@@ -60,9 +60,9 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 		name 						John Doe
 		email 						john@testing.com
 		password 					12345678
-		password_confirmation 		12345678
+		password_confirmation 				12345678
 		nationalID 					1199012990900025
-		phone_number 				+257800000222
+		phone_number 					+257800000222
 		dob 						15-07-1990
 
 - Employee with MANAGER position  will be created and his login account will be created automatically
