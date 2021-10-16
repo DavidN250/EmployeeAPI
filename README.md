@@ -1,4 +1,4 @@
 # EmployeeAPI
  
-It is a Restful API for an employee management system. The API should allows following operations:
+It is a Restful API for an employee management system. The API should allows the following operations:
 Create, Update, Read, Delete, Search, Authenticate, Send notification email
