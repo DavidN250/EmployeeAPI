@@ -56,7 +56,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/register
 
-		KEY                 		VALUE
+		KEY                     	VALUE
 		name 						John Doe
 		email 						john@testing.com
 		password 					12345678
@@ -74,7 +74,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees
 
-		KEY                 		VALUE
+		KEY                        		VALUE
 		name 						Kamille Doe
 		email 						kamille@testing.com
 		nationalID 					1199812990900025
@@ -103,7 +103,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees/2
 
-		KEY                 		VALUE
+		KEY                 		   VALUE
 		phone_number 				+250799999222
 
 -This will update phone number of the employee with ID 2 with a new value
@@ -144,7 +144,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees
 
-		KEY                 		VALUE
+		KEY                 		   VALUE
 		email 						kamille@testing.com
 		password 					1199812990900025
 
