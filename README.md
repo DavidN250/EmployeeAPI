@@ -56,7 +56,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/register
 
-		KEY                     	VALUE
+		KEY 						VALUE
 		name 						John Doe
 		email 						john@testing.com
 		password 					12345678
@@ -74,13 +74,13 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees
 
-		KEY                        		VALUE
+		KEY 						VALUE
 		name 						Kamille Doe
 		email 						kamille@testing.com
 		nationalID 					1199812990900025
 		phone_number 				+257888888222
 		dob 						15-07-1990
-		position   					WEBDESIGNER
+		position 					WEBDESIGNER
 
 - Employee with specified position  will be created
 - He/She will receive an email to welcome him/her to the company.(Check MailTrap inbox)
@@ -103,7 +103,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees/2
 
-		KEY                 		   VALUE
+		KEY 						VALUE
 		phone_number 				+250799999222
 
 -This will update phone number of the employee with ID 2 with a new value
@@ -144,7 +144,7 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees
 
-		KEY                 		   VALUE
+		KEY 						VALUE
 		email 						kamille@testing.com
 		password 					1199812990900025
 
@@ -157,8 +157,20 @@ It is deloped using Laravel 8, PHP Framework and MYSQL as database.
 
 		http://127.0.0.1:8000/api/employees 
 
-		KEY                 		VALUE
+		KEY 						VALUE
 		email 						kamille@testing.com
 
 - Check mailtrap inbox and you will see the reset password link sent to the email provided.
 
+## DOCKERIZE ENVIRONMENT
+
+- Start docker on your machine
+- In downloaded code there is a file called **docker-compose.yml**
+- In your command prompt or terminal(MacOS) run this command at root directory of the project:
+
+		./vendor/bin/sail up
+
+- This will create a container **employeeAPI** with necessary images. 
+- Run this command to see all created images:
+
+		docker image list
